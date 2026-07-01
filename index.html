@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RozzBuddy - Everything Near You</title>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 1. HEADER -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
     <header>
         <div class="container header-content">
             <div class="logo-section">
                 <img src="logo.png" alt="RozzBuddy" onerror="this.src='https://via.placeholder.com/150x40?text=ROZZBUDDY'">
                 
-                <!-- WORKING DROPDOWN -->
                 <div class="location-container">
                     <button class="location-badge" id="locationBtn">
                         <i class="fa-solid fa-location-dot"></i> 
@@ -35,7 +34,6 @@
                 </div>
             </div>
 
-            <!-- Hamburger menu icon for mobile -->
             <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
 
             <nav class="main-nav">
@@ -55,7 +53,6 @@
         </div>
     </header>
 
-    <!-- 2. HERO SECTION -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-container">
@@ -82,7 +79,6 @@
                     </div>
                 </div>
 
-                <!-- ALIGNED STATS CARDS -->
                 <div class="stats">
                     <div class="stat-item"><div class="stat-icon">🏪</div><div class="stat-info"><h4>10,000+</h4><p>Businesses</p></div></div>
                     <div class="stat-item"><div class="stat-icon">🛍️</div><div class="stat-info"><h4>500+</h4><p>Categories</p></div></div>
@@ -93,7 +89,6 @@
         </div>
     </section>
 
-    <!-- 3. CATEGORIES SECTION -->
     <section class="categories-section">
         <div class="container">
             <div class="categories-wrapper">
@@ -109,11 +104,9 @@
         </div>
     </section>
 
-    <!-- 4. MAP & LISTINGS SECTION -->
     <section class="map-listings-section">
         <div class="container map-grid">
             
-            <!-- Left: Listings -->
             <div class="listings-box">
                 <h2>Find Services Around You</h2>
                 <div class="tabs">
@@ -124,7 +117,6 @@
                     <button class="tab">Events</button>
                 </div>
                 <div class="listings-scroll">
-                    <!-- Listing Card 1 -->
                     <div class="listing-card">
                         <div class="list-img bg-blue"></div>
                         <div class="list-info">
@@ -142,7 +134,6 @@
                             <span class="view-text">View</span>
                         </div>
                     </div>
-                    <!-- Listing Card 2 -->
                     <div class="listing-card">
                         <div class="list-img bg-orange"></div>
                         <div class="list-info">
@@ -164,10 +155,9 @@
                 <button class="view-all-btn">View All Results</button>
             </div>
             
-            <!-- Right: WORKING LIVE MAP -->
             <div class="map-box">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.1160995101!2d72.74109995!3d19.08219785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.1160994326!2d72.7410999573881!3d19.08219783907722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1718721111111!5m2!1sen!2sin" 
                     width="100%" 
                     height="100%" 
                     style="border:0; border-radius: 1.5rem;" 
@@ -184,7 +174,6 @@
         </div>
     </section>
 
-    <!-- 5. AI BANNER -->
     <section class="ai-banner">
         <div class="container">
             <div class="ai-box">
@@ -210,7 +199,6 @@
         </div>
     </section>
 
-    <!-- 6. TRENDING SECTION -->
     <section class="trending-section">
         <div class="container">
             <div class="section-header">
@@ -242,7 +230,24 @@
         </div>
     </section>
 
-    <!-- 7. HOW IT WORKS / FOOTER -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-box">
+                <div class="contact-text">
+                    <h2>List Your Business or Get in Touch</h2>
+                    <p>Have questions? Want to partner with us? Drop us a message below and our team will get back to you.</p>
+                </div>
+                
+                <form class="contact-form" action="YOUR_COPIED_WEB_APP_URL_HERE" method="POST">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <textarea name="message" placeholder="How can we help you?" required rows="3"></textarea>
+                    <button type="submit" class="btn-primary">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <section class="how-it-works">
         <div class="container">
             <div class="hiw-box">
@@ -273,7 +278,6 @@
         </div>
     </section>
 
-    <!-- JS script -->
     <script src="script.js"></script>
 </body>
 </html>
