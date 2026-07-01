@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RozzBuddy - Everything Near You</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. HEADER -->
+    <header>
+        <div class="container header-content">
+            <div class="logo-section">
+                <img src="logo.png" alt="RozzBuddy" onerror="this.src='https://via.placeholder.com/150x40?text=ROZZBUDDY'">
+                
+                <!-- WORKING DROPDOWN -->
+                <div class="location-container">
+                    <button class="location-badge" id="locationBtn">
+                        <i class="fa-solid fa-location-dot"></i> 
+                        <span id="selectedCity">Mumbai, India</span> 
+                        <i class="fa-solid fa-chevron-down nav-icon"></i>
+                    </button>
+                    <ul class="location-dropdown" id="locationDropdown">
+                        <li class="loc-option">Mumbai, India</li>
+                        <li class="loc-option">Delhi, India</li>
+                        <li class="loc-option">Bangalore, India</li>
+                        <li class="loc-option">Pune, India</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Hamburger menu icon for mobile -->
+            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+
+            <nav class="main-nav">
+                <ul>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Near Me</a></li>
+                    <li><a href="#">Offers</a></li>
+                    <li><a href="#">For Businesses</a></li>
+                </ul>
+            </nav>
+
+            <div class="auth-buttons desktop-auth">
+                <button class="btn-outline">List Your Business</button>
+                <button class="btn-primary">Login / Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-text">
+                <h1>Everything Near You.<br><span>One Search Away.</span></h1>
+                <p>Find and book doctors, shops, electricians, event planners, repair services and more around your location.</p>
+                
+                <div class="search-bar">
+                    <i class="fa-solid fa-search search-icon-left hide-mobile"></i>
+                    <input type="text" placeholder="What are you looking for?">
+                    <div class="divider hide-mobile"></div>
+                    <button class="near-me hide-mobile"><i class="fa-solid fa-location-dot"></i> Near me</button>
+                    <button class="search-btn" id="mainSearchBtn"><i class="fa-solid fa-search"></i></button>
+                </div>
+
+                <div class="popular-searches">
+                    <strong>POPULAR SEARCHES:</strong>
+                    <div class="pills-container">
+                        <span class="pill">Doctor</span>
+                        <span class="pill">AC Repair</span>
+                        <span class="pill">Painter</span>
+                        <span class="pill">Saloon</span>
+                        <span class="pill">Event Planner</span>
+                    </div>
+                </div>
+
+                <!-- ALIGNED STATS CARDS -->
+                <div class="stats">
+                    <div class="stat-item"><div class="stat-icon">🏪</div><div class="stat-info"><h4>10,000+</h4><p>Businesses</p></div></div>
+                    <div class="stat-item"><div class="stat-icon">🛍️</div><div class="stat-info"><h4>500+</h4><p>Categories</p></div></div>
+                    <div class="stat-item"><div class="stat-icon">👥</div><div class="stat-info"><h4>2M+</h4><p>Happy Users</p></div></div>
+                    <div class="stat-item"><div class="stat-icon">🏙️</div><div class="stat-info"><h4>50+</h4><p>Cities</p></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. CATEGORIES SECTION -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="categories-wrapper">
+                <div class="category-item"><div class="category-icon c-health"><i class="fa-solid fa-stethoscope"></i></div><h3>Healthcare</h3><p>1200+</p></div>
+                <div class="category-item"><div class="category-icon c-shops"><i class="fa-solid fa-bag-shopping"></i></div><h3>Shops</h3><p>3400+</p></div>
+                <div class="category-item"><div class="category-icon c-events"><i class="fa-regular fa-calendar-check"></i></div><h3>Events</h3><p>850+</p></div>
+                <div class="category-item"><div class="category-icon c-home"><i class="fa-solid fa-house"></i></div><h3>Home Services</h3><p>2800+</p></div>
+                <div class="category-item"><div class="category-icon c-repairs"><i class="fa-solid fa-wrench"></i></div><h3>Repairs</h3><p>2600+</p></div>
+                <div class="category-item"><div class="category-icon c-auto"><i class="fa-solid fa-car"></i></div><h3>Automobile</h3><p>1500+</p></div>
+                <div class="category-item"><div class="category-icon c-edu"><i class="fa-solid fa-book-open"></i></div><h3>Education</h3><p>950+</p></div>
+                <div class="category-item"><div class="category-icon c-beauty"><i class="fa-solid fa-spa"></i></div><h3>Beauty</h3><p>1100+</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. MAP & LISTINGS SECTION -->
+    <section class="map-listings-section">
+        <div class="container map-grid">
+            
+            <!-- Left: Listings -->
+            <div class="listings-box">
+                <h2>Find Services Around You</h2>
+                <div class="tabs">
+                    <button class="tab active">All</button>
+                    <button class="tab">Doctors</button>
+                    <button class="tab">Shops</button>
+                    <button class="tab">Repairs</button>
+                    <button class="tab">Events</button>
+                </div>
+                <div class="listings-scroll">
+                    <!-- Listing Card 1 -->
+                    <div class="listing-card">
+                        <div class="list-img bg-blue"></div>
+                        <div class="list-info">
+                            <h3>City Care Hospital</h3>
+                            <p class="list-type">Multi Speciality Hospital</p>
+                            <div class="list-meta">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.6</span>
+                                <span class="reviews">(256)</span>
+                                <span class="dist"><i class="fa-solid fa-location-dot"></i> 0.8 km</span>
+                                <span class="status open">Open</span>
+                            </div>
+                        </div>
+                        <div class="list-actions">
+                            <button class="icon-btn"><i class="fa-solid fa-phone"></i></button>
+                            <span class="view-text">View</span>
+                        </div>
+                    </div>
+                    <!-- Listing Card 2 -->
+                    <div class="listing-card">
+                        <div class="list-img bg-orange"></div>
+                        <div class="list-info">
+                            <h3>Shree Hardware Store</h3>
+                            <p class="list-type">Hardware Store</p>
+                            <div class="list-meta">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.3</span>
+                                <span class="reviews">(98)</span>
+                                <span class="dist"><i class="fa-solid fa-location-dot"></i> 1.2 km</span>
+                                <span class="status open">Open</span>
+                            </div>
+                        </div>
+                        <div class="list-actions">
+                            <button class="icon-btn"><i class="fa-solid fa-phone"></i></button>
+                            <span class="view-text">View</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="view-all-btn">View All Results</button>
+            </div>
+            
+            <!-- Right: WORKING LIVE MAP -->
+            <div class="map-box">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.1160995101!2d72.74109995!3d19.08219785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0; border-radius: 1.5rem;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div class="map-controls">
+                    <div class="map-location" id="mapLocationTag"><i class="fa-solid fa-location-dot"></i> Mumbai, India</div>
+                    <button class="filter-btn"><i class="fa-solid fa-sliders"></i> Filter</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. AI BANNER -->
+    <section class="ai-banner">
+        <div class="container">
+            <div class="ai-box">
+                <div class="ai-left">
+                    <div class="ai-icon"><i class="fa-solid fa-robot"></i></div>
+                    <div>
+                        <h2>Ask RozzBuddy AI <i class="fa-solid fa-sparkles"></i></h2>
+                        <p>Your smart assistant to find the best services near you.</p>
+                    </div>
+                </div>
+                <div class="ai-right">
+                    <div class="ai-search">
+                        <input type="text" placeholder="I need a birthday event planner near me under ₹20,000">
+                        <button><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                    <div class="ai-pills">
+                        <span>Find the best dentist nearby</span>
+                        <span>AC repair service near me</span>
+                        <span>Top rated salon near me</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. TRENDING SECTION -->
+    <section class="trending-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trending Around You 🔥</h2>
+                <a href="#" class="view-all-link">View All <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="trending-grid">
+                <div class="trend-card">
+                    <div class="trend-img t-img-1"><span class="trend-tag bg-red">Trending</span></div>
+                    <h3>Restaurants</h3><p>120+ Near You</p>
+                </div>
+                <div class="trend-card">
+                    <div class="trend-img t-img-2"><span class="trend-tag bg-purple">Popular</span></div>
+                    <h3>Doctors</h3><p>85+ Near You</p>
+                </div>
+                <div class="trend-card">
+                    <div class="trend-img t-img-3"><span class="trend-tag bg-teal">Top Rated</span></div>
+                    <h3>Home Services</h3><p>150+ Near You</p>
+                </div>
+                <div class="trend-card">
+                    <div class="trend-img t-img-4"><span class="trend-tag bg-orange">New</span></div>
+                    <h3>Event Planners</h3><p>30+ Near You</p>
+                </div>
+                <div class="trend-card hide-mobile">
+                    <div class="trend-img t-img-5"><span class="trend-tag bg-purple">Popular</span></div>
+                    <h3>Beauty & Wellness</h3><p>90+ Near You</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. HOW IT WORKS / FOOTER -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="hiw-box">
+                <div class="hiw-left">
+                    <h2>How RozzBuddy Works?</h2>
+                    <div class="steps-container">
+                        <div class="step-line"></div>
+                        <div class="step"><div class="step-icon s-1"><i class="fa-solid fa-search"></i><div class="num">1</div></div><h4>Search</h4><p>Find anything near you</p></div>
+                        <div class="step"><div class="step-icon s-2"><i class="fa-solid fa-list-check"></i><div class="num">2</div></div><h4>Choose</h4><p>Best from listings</p></div>
+                        <div class="step"><div class="step-icon s-3"><i class="fa-solid fa-phone"></i><div class="num">3</div></div><h4>Connect</h4><p>Call, chat or book</p></div>
+                        <div class="step"><div class="step-icon s-4"><i class="fa-solid fa-circle-check"></i><div class="num">4</div></div><h4>Done</h4><p>Quick & reliable</p></div>
+                    </div>
+                </div>
+                <div class="hiw-right">
+                    <div class="app-info">
+                        <h3>Take RozzBuddy Everywhere</h3>
+                        <p>Download our app and explore more on the go.</p>
+                        <div class="app-buttons">
+                            <button class="app-btn"><i class="fa-brands fa-google-play"></i> Google Play</button>
+                            <button class="app-btn"><i class="fa-brands fa-apple"></i> App Store</button>
+                        </div>
+                    </div>
+                    <div class="qr-code">
+                        <i class="fa-solid fa-qrcode" style="font-size: 3rem; color: #1A65FF;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS script -->
+    <script src="script.js"></script>
+</body>
+</html>
