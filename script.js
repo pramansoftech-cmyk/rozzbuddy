@@ -1,14 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // --- 0. PRELOADER LOGIC ---
+    // --- 0. PRELOADER LOGIC (EXTENDED TIME FOR GIF) ---
     window.addEventListener("load", () => {
         const preloader = document.getElementById("preloader");
+        // Extended the delay to 800ms so the user can see your animated GIF
         setTimeout(() => {
             preloader.classList.add("loader-hidden");
-        }, 300);
+        }, 800);
     });
 
-    // --- 1. MOBILE HAMBURGER MENU LOGIC (NEW) ---
+    // --- 1. MOBILE HAMBURGER MENU LOGIC ---
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const navLinks = document.querySelectorAll('.nav-links a');
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Close menu when a link is clicked (redirects to Home '#')
+    // Close menu when a link is clicked
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             mobileMenu.classList.remove('active');

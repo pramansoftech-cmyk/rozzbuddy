@@ -11,26 +11,23 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: var(--font-family); }
-/* Prevent horizontal scrolling on the body */
 body { background-color: var(--bg-color); color: var(--text-main); overflow-x: hidden; width: 100%; }
 .container { max-width: 1350px; margin: 0 auto; padding: 0 2rem; width: 100%; box-sizing: border-box; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
 
-/* === PRELOADER === */
+/* === UPDATED PRELOADER FOR GIF === */
 #preloader {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background-color: var(--white); z-index: 9999;
     display: flex; justify-content: center; align-items: center;
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
-.spinner {
-    width: 50px; height: 50px; border: 5px solid #f3f3f3;
-    border-top: 5px solid var(--primary); border-radius: 50%;
-    animation: spin 1s linear infinite;
+.loader-logo {
+    width: 250px; /* Adjust this width based on your actual GIF size */
+    height: auto;
 }
-@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 .loader-hidden { opacity: 0; visibility: hidden; }
 
 /* === HEADER & DROPDOWN === */
@@ -215,10 +212,9 @@ header { background: var(--white); border-bottom: 1px solid var(--border-color);
     /* HERO IMAGE RESTORED ON MOBILE */
     .hero { 
         padding: 4rem 0; min-height: 500px; 
-        background-image: url('hero-image.png'); /* Restored */
+        background-image: url('hero-image.png');
         background-position: center; 
     }
-    /* Stronger overlay on mobile so text is readable */
     .hero-overlay { background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 100%); }
     .hero-text { text-align: center; margin: 0 auto; }
     .hero-text h1 { font-size: 2.5rem; }
